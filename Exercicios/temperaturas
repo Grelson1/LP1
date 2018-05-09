@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void){
+    int n = 5;
+    char temps[n];
+    int temp;
+    float media;
+    int soma = 0, acima = 0;
+    int i = 0;
+    while (i < n){
+        printf("Digite uma temperatura: ");
+        scanf("%d", &temp);
+        temps[i] = temp;
+        soma += temp;
+        i++;
+    }
+    media = (float)soma / n;
+    for (i = 0; i < n; i++){
+        if (temps[i] > media){
+            acima++;
+        }
+    }
+    printf("%d temperaturas acima da media %f.\n", acima, media);
+    return 0;
+}
