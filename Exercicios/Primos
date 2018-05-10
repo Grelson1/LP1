@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int eh_primo (int n){
+    int i;
+    int cont;
+    int resto;
+    for (i = n; i >= 1; i--){
+        resto = n%i;
+        if (resto == 0){
+            cont++;
+        }
+    }
+    if (cont == 2){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+int todos_os_primos (int max){
+    int j;
+    int k;
+    int som;
+    printf ("Primos ate o valor selecionado: ");
+    while (max >= 1){
+        for (j = max; j >= 1; j--){
+          k = max%j;
+          if (k == 0){
+            som++;
+          }
+        }
+        if (som == 2){
+            printf ("%d,", max);
+        }
+        som = 0;
+        max--;
+    }
+    return 0;
+}
+int main (void){
+    int n;
+    printf("Digite um numero: ");
+    scanf ("%d", &n);
+    int primo;
+    primo = eh_primo(n);
+    if (primo){
+        printf("O valor %d e primo!\n", n);
+    }
+    else{
+        printf ("O valor %d nao e primo!\n", n);
+    }
+    int max;
+    max = n;
+    int f;
+    f = todos_os_primos(max);
+    return 0;
+}
