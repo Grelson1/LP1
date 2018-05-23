@@ -5,9 +5,9 @@ int main (void){
     int b;
     int* p;
     printf ("Digite o primeiro valor: ");
-    scanf ("%d\n", &a);
+    scanf ("%d", &a);
     printf ("Digite o segundo valor: ");
-    scanf ("%d\n", &b);
+    scanf ("%d", &b);
     printf ("Valor1= %d\n Valor2= %d\n", a, b);
     if (a > b){
         p = &a;
