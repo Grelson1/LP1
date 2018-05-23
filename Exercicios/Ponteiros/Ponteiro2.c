@@ -8,9 +8,9 @@ int main (void){
     int conta2;
    
     printf ("Digite o saldo da conta 1: ");
-    scanf ("%d\n", &conta1);
+    scanf ("%d", &conta1);
     printf ("Digite o saldo da conta 2: ");
-    scanf ("%d\n", &conta2);
+    scanf ("%d", &conta2);
     if (conta1 > conta2){
        compra(&conta1, 500);
     }
