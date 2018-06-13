@@ -3,19 +3,22 @@
 struct Equipe{
     int nome;
     int v;
+    int e;
     int d;
 };
 
-void preenche (struct Equipe* e){
+void preenche (struct Equipe* p){
     printf ("Nome da equipe: ");
-    scanf ("%d", (*e).nome);
-    (*e).v = 0;
-    (*e).d = 0;
+    scanf ("%d", (*p).nome);
+    (*p).v = 0;
+    (*p).e = 0;
+    (*p).d = 0;
 }
 
 int main (void){
     struct Equipe equipe1;
     preenche(&equipe1);
-    printf("Equipe: %d\n Vitorias= %d\n Derrotas= %d\n", equipe1.nome, equipe1.v, equipe1.d);
+    printf("Equipe: %d, Vitorias= %d, Empates= %d, Derrotas= %d", equipe1.nome, equipe1.v, equipe.e, equipe1.d);
     return 0;
 }
+
