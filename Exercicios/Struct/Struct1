@@ -1,22 +1,21 @@
 #include <stdio.h>
-#include <string.h>
 
 struct Equipe{
-    char nome[10];
+    int nome;
     int v;
     int d;
 };
 
-void preenche (struct Equipe*){
+void preenche (struct Equipe* e){
     printf ("Nome da equipe: ");
-    sacnf ("%s", (*e).nome);
+    scanf ("%d", (*e).nome);
     (*e).v = 0;
     (*e).d = 0;
 }
 
 int main (void){
-    struct Equipe Liquid;
-    preenche(&Liquid);
-    printf("Equipe: %s\n Vitorias= %d\n Derrotas= %d\n", Liquid.nome, Liquid.v, Liquid.d);
+    struct Equipe equipe1;
+    preenche(&equipe1);
+    printf("Equipe: %d\n Vitorias= %d\n Derrotas= %d\n", equipe1.nome, equipe1.v, equipe1.d);
     return 0;
 }
