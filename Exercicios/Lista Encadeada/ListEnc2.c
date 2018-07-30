@@ -6,7 +6,6 @@ struct Caixa{
 };
 
 int main (void){
-	int i;
 	struct Caixa c0, c1, c2, c3, c4;
 	c4.valor = 5;
 	c4.prox = NULL;
