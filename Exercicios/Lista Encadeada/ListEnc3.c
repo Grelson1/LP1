@@ -5,7 +5,7 @@ struct Caixa{
 };
 
 void exibe (struct Caixa* caixa){
-    printf("%d->%d->%d->%d->%d\n", caixa->valor, caixa->prox->valor, caixa->prox->prox->valor, caixa->prox->prox->prox->valor, caixa->prox->prox->prox->prox->valor);
+    printf("->%d", caixa->valor);
 }
 int main (void){
 	struct Caixa c0, c1, c2, c3, c4;
@@ -20,4 +20,8 @@ int main (void){
 	c0.valor = 1;
 	c0.prox = &c1;
 	exibe ( &c0);
+	exibe ( &c1);
+	exibe ( &c2);
+	exibe ( &c3);
+	exibe ( &c4);
 }
