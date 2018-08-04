@@ -10,19 +10,19 @@ struct Ponto preenche(int x, int y) {
 void peenche_arr(struct Ponto pontos[10]) {
     int x, y, i;
     for (i = 0; i < 10; i++) {
-        printf("Escreva os valores de x e y do ponto: ");
-        scanf("%d%d", &x, &y);
+        printf("Digite x e y: ");
+        scanf("%d %d", &x, &y);
         pontos[i] = preenche(x, y);
     }
 }
 struct Ponto minimo(struct Ponto pontos[10]) {
-    int i, dist = -1;
+    int i, longe = -10;
     struct Ponto p;
     for (i = 0; i < 10; i++) {
         struct Ponto po = pontos[i];
         int d1 = (po.x * po.x) + (po.y * po.y);
-        if (d1 > dist) {
-            dist = d1;
+        if (d1 > longe) {
+            longe = d1;
             p = po;
         }
     }
@@ -33,6 +33,6 @@ int main() {
     struct Ponto p;
     peenche_arr(pontos);
     p = minimo(pontos);
-    printf("O ponto mais distante da origem é P(%d %d).\n", p.x, p.y);
+    printf("Ponto mais longe de (0,0)= (%d %d)\n", p.x, p.y);
     return 0;
 }
